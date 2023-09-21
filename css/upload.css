@@ -1,0 +1,233 @@
+.upload-doc-in {
+    position: absolute;
+    top: 18px;
+    left: 310px;
+    font-size: 64px;
+    font-weight: 800;
+    color: #172AD3;
+    text-shadow: 0 10px 4px rgba(78, 109, 245, 0.25);
+  }
+  .presentations-research-papers {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    font-weight: 1000;
+    color: #8e8888;
+  }
+  .upload-child {
+    position: absolute;
+    top: 341px;
+    left: 197px;
+    border-radius: 32px;
+    background-color: #f7f3f3;
+    border: 1px dashed var(--color-black);
+    box-sizing: border-box;
+    width: 1045px;
+    height: 302px;
+  }
+  .upload-item {
+    position: absolute;
+    top: 435px;
+    left: 527px;
+    border-radius: 10px;
+    background-color: var(--color-mediumblue);
+    width: 385px;
+    height: 77px;
+  }
+  .or-drag,
+  .select-doc-to {
+    position: absolute;
+    top: 533px;
+    left: 636px;
+    font-weight: 800;
+    color: var(--color-black);
+  }
+  .select-doc-to {
+    top: 459px;
+    left: 594px;
+    color: var(--color-white);
+  }
+  .data-docs {
+    color: #514d4d;
+  }
+  .supported-file-types-container {
+    position: absolute;
+    top: 688px;
+    left: 228px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #908d8d;
+  }
+  .a-man-relaxes-while-smoking-a-icon {
+    position: absolute;
+    top: 776px;
+    left: 484px;
+    width: 471px;
+    height: 248px;
+    object-fit: cover;
+  }
+  .upload {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1024px;
+    overflow: hidden;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-mediumblue);
+    font-family: var(--font-inter);
+  }
+  .btn{
+    height: 50px;
+    width: 350px;
+    position: relative;
+    left: 25px;
+    top: 100px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(207, 255, 255);
+    top: 100px;
+}.logo {
+    font-size: 40px;
+    position: absolute;
+    left: 41%;
+    top: 40px;
+    font-weight: bold;
+    color: rgb(37, 0, 201);
+    font-family: Arial, sans-serif;
+
+}
+.signup-container{
+    position: relative;
+    left: 18%;
+    top: 130px;
+    width: 900px;
+    height: 230px;
+    border-radius: 30px;
+    border: 2px dotted black;
+    background-color: rgb(220, 220, 220);
+}
+.top_text{
+    font-size: 25px;
+    position: relative;
+    left: 3em;
+    top: 15px;
+    font-weight: bold;
+}
+.user {
+    height: 50px;
+    width: 350px;
+    position: relative;
+    left: 25px;
+    top: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+/* .user::placeholder{
+    position:relative;
+    left: 10px;
+    top: 5px;
+    font-size: 20px;
+    padding: 150px;
+} */
+.box
+{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+}
+.inner{
+    width: 200px;
+    height: 200px;
+    
+    padding: 0px;
+    background-color: pink;
+}
+.email{
+    height: 50px;
+    width: 350px;
+    position: relative;
+    left: 25px;
+    top: 60px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.password{
+    height: 50px;
+    width: 350px;
+    position: relative;
+    left: 25px;
+    top: 80px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.confirm_password{
+    height: 50px;
+    width: 350px;
+    position: relative;
+    left: 25px;
+    top: 100px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.btn{
+    height: 50px;
+    width: 350px;
+    position: absolute;
+    left: 30%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #172AD3;
+    color: rgb(207, 255, 255);
+    top: 80px;
+}
+.btn:hover{
+    background-color: rgb(100, 184, 184);
+    color: rgb(0, 0, 0);
+}
+.btn:active{
+    background-color: rgb(0, 0, 0);
+    color: rgb(207, 255, 255);
+}
+.element {
+    font-family: Arial, sans-serif;
+  }
+  .forgotten-password {
+    position: absolute;
+    top: 280px;
+    left: 85px;
+    text-decoration: underline;
+    font-weight: 600;
+    color: #3d6ce7;
+  }
+  .cna{ height: 50px;
+    width: 350px;
+    position: relative;
+    left: 30px;
+    top: 400px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(4, 128, 29);
+    color: rgb(207, 255, 255);
+    top: 250px;
+
+  }
+  
+  #file-input {
+    display: none;
+  }
+  #upload-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+  }

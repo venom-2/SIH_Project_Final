@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="body">
+    <div><p class="logo">DATA-DOX</p></div>
+    <div class="signup-container">
+        <div class="top_text">Sign up to DATA-DOX</div>
+        <div>
+            <input type="text" id="txtuser" placeholder="Enter your username" class="user">
+        </div>
+        <div>
+            <input type="email" id="txtemail" placeholder="Enter your email" class="email">
+        </div>
+        <div>
+            <input type="password" id="txtpassword" placeholder="Enter your password" class="password">
+        </div>
+        <div>
+            <input type="password" id="txtconfirmpassword" placeholder="Confirm your password" class="confirm_password">
+        </div>
+        <div>
+            <button class="btn" onclick="saveFile()"><a href="dashboard.html">Sign Up</a></button>  
+        </div>
+    </div>
+    <div class="peek">
+        <img src="images/peeking1.jpg" alt="" class="peek">
+    </div>
+    <script>
+        let saveFile = () => {
+          
+          // Get the data from each element on the form.
+          const name = document.getElementById('txtuser').value;
+          const email = document.getElementById('txtemail').value;
+          const password = document.getElementById('txtpassword').value;
+          const confirmPassword = document.getElementById('txtconfirmpassword').value;
+      
+          // This variable stores all the data.
+          let data = 
+            'Username: ' + name + ' \r\n ' + 
+            'Email: ' + email + ' \r\n ' + 
+            'Password: ' + password + ' \r\n ' + 
+            'Confirm Password: ' + confirmPassword;
+      
+          // Convert the text to BLOB.
+          const textToBLOB = new Blob([data], { type: 'text/plain' });
+          const sFileName = 'formData.txt';   // The file to save the data.
+      
+          let newLink = document.createElement("a");
+          newLink.download = sFileName;
+      
+          if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+          }
+          else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+          }
+      
+          newLink.click(); 
+        }
+      </script>
+</body>
+</html>
