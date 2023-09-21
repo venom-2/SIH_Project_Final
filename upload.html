@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up</title>
-    <link rel="stylesheet" href="css/upload.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="css/upload.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="upload">
-      <div class="upload-doc-in">Upload Doc. in DATA-DOCS</div>
-      <div class="presentations-research-papers">
-        Presentations, research papers, legal documents, and more
-      </div>
-      <div class="signup-container">
-        <div>
-            <input type="file" id="file-input" style="display: none;">
-            <button class="btn" id="upload-button" onclick="document.getElementById('file-input').click()">Select DOC. to Upload</button>
-        </div>
+    <div class="upload">
+      <a href="dashboard.html"><img src="images/back-left-arrow-circular-button-outline.png" alt="back" class="back-btn"></a>
+      <div class="upload-doc-in">Upload Documents in DATA-DOX</div>
+      <div class="presentations-research-papers">
+        Legal documents and Criminal Database
+      </div>
+      <div class="signup-container" ondragover="event.preventDefault()" ondrop="drop(event)">
+        <div>
+            <input type="file" id="file-input" style="display: none;">
+            <button class="btn" id="upload-button" onclick="document.getElementById('file-input').click()">Select DOC. to Upload</button>
+        </div>
+        <div class="content">
+          <span>Supported file types: pdf, txt, doc, ppt, xls, docx, and more by uploading, you agree to our <strong>DATA-DOX</strong> Policies.</span>
+        </div>
+      </div>
+    </div>
+    <script>
+        function drop(event) {
+            event.preventDefault();
+            const file = event.dataTransfer.files[0];
+            // Handle the dropped file here
+        }
+    </script>
 </body>
 </html>

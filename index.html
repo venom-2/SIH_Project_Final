@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="css/global.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap"/>
-  </head>
-  <body>
-    <div class="window">
-      <div class="data-docs">DATA-DOCS</div>
-      <div class="a-convenient-place-container">
-        <p class="a-convenient-place">
-          A convenient place to store, share and modify your legal
-          records.Every lawyer”s first choice is DATA-DOCS.
-        </p>
-        <p class="a-convenient-place">~ DATA-DOCS</p>
-      </div>
-      <div class="window-child"></div>
-      <div class="window-item"></div>
-      <div class="window-inner"></div>
-      <div class="rectangle-div"></div>
-      <a class="forgotten-password" href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjk0NTMyNjQzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&ars=facebook_login" target="_blank">
-        Forgotten password?
-        </a>
-      <div class="line-div"></div>
-      <div class="window-child1"></div>
-      <div class="email-address-or-container">
-        <p class="a-convenient-place">Email Address or Phone number</p>
-      </div>
-      <div class="password">Password</div>
-      <div class="log-in"><a href="signup.html">Log in</a></div>
-      <div class="create-new-account">Create New Account</div>
-      <img
-        class="removebg-preview-1-icon"
-        alt=""
-        src="./public/undefined.png"/>
+</head>
+<body>
+    <div>
+        <p class="logo">DATA-DOX</p>
     </div>
+    <div class="signup-container">
+        <div>
+            <input id="txtuser" type="text" placeholder="Email Address or Phone number" class="user">  
+        </div>
+        <div>
+            <input id="txtpassword" type="password" placeholder="Password" class="email">  
+        </div>
+        <div>
+            <a href="dashboard.html"><button class="btn" onclick="saveFile()">LOG IN</button></a>
+        </div>
+        <div> 
+            <a class="forgotten-password" href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjk0NTMyNjQzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&ars=facebook_login" target="_blank">
+                <h2>Forgotten password?</h2>
+            </a>
+        </div>
+        <a href="signup.html">
+            <div>
+                <button class="cna">Create New Account</button>
+            </div>
+        </a>
+    </div>
+    <script>
+        let saveFile = () => {
+            // Get the data from each element on the form.
+            const name = document.getElementById('txtuser').value;
+            const password = document.getElementById('txtpassword').value;
+    
+            // This variable stores all the data.
+            let data =
+                'Username: ' + name + ' \r\n ' +
+                'Password: ' + password + ' \r\n';
+    
+            // Convert the text to BLOB.
+            const textToBLOB = new Blob([data], { type: 'text/plain' });
+            const sFileName = 'formData.txt'; // The file to save the data.
+    
+            let newLink = document.createElement("a");
+            newLink.download = sFileName;
+    
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+    
+            newLink.click();
+        }
+    </script>
 </body>
 </html>
