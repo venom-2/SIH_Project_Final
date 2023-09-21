@@ -48,5 +48,5 @@ Before you begin, make sure you have the following tools installed:
 
  **Clone this repository** to your local machine:
    ```shell
-   git clone https://github.com/yourusername/sih-evault.git
-   cd sih-evault
+   git clone https://github.com/yourusername/SIH_Project_Final.git
+   cd SIH_Project_Final
